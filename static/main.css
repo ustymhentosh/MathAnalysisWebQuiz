@@ -1,0 +1,266 @@
+.back {
+    background-color: #242f37;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.back_welcome {
+    background-color: #242f37;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.zaholovok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: verdana;
+    font-weight: 200;
+    color: aliceblue;
+}
+
+.txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: verdana;
+    font-weight: 200;
+    color: aliceblue;
+}
+
+
+.button {
+    display: flex;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    outline: none;
+    border: none;
+    padding: 1rem;
+
+}
+
+
+.button-1 {
+    background-color: #FF4136;
+    color: white;
+}
+
+.button-2 {
+    background-color: #0074D9;
+    color: white;
+}
+
+.button-3 {
+    background-color: #2ECC40;
+    color: white;
+}
+
+.button-4 {
+    background-color: #9900c8;
+    color: white;
+}
+
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-1:hover {
+    background-color: #ff5252;
+}
+
+.button-2:hover {
+    background-color: #48A9FF;
+}
+
+.button-3:hover {
+    background-color: #6EFB63;
+}
+
+.button-4:hover {
+    background-color: #f704ff;
+    color: rgb(255, 255, 255);
+}
+
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: verdana;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.forma {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: verdana;
+    font-size: 30px;
+    color: aliceblue;
+    border: 2px solid #44ff00;
+    border-radius: 5px;
+    border-style: groove;
+    padding: 1rem;
+
+}
+
+.heading {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.options {
+    border: 5px solid #2e38f2;
+    border-radius: 5px;
+    border-style: dotted;
+    background-color: #1c5061;
+    margin: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+
+
+.button_submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: verdana;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.button_submit:hover {
+    transform: scale(1.1);
+    background-color: #93e823;
+    color: rgb(255, 255, 255);
+
+}
+
+.button_exit {
+    padding: 10px 20px;
+    background-color: #de2d21;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: verdana;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.button_exit:hover {
+    transform: scale(1.1);
+    background-color: #fa4e4e;
+    color: rgb(255, 255, 255);
+
+}
+
+.radio_button {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type='radio'] {
+    transform: scale(2.5);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 1rem;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.counter {
+    color: white;
+    font-family: verdana;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.results {
+    color: rgb(0, 0, 0);
+    font-family: verdana;
+    font-size: 20px;
+}
+
+.series_photo {
+    max-width: 80%;
+    max-height: 80%;
+}
