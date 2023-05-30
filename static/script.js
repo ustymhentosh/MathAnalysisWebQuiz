@@ -75,7 +75,7 @@ forma.addEventListener("submit", (event) => {
             right_answ += 1
         }
         modal.style.display = "block";
-        document.getElementById('results').innerHTML = 'Result ' + right_answ + '/' + 4
+        document.getElementById('results').innerHTML = 'Result  ' + right_answ + '/' + 4
     }
 
 
