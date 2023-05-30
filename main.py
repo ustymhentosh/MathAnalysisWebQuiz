@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from random import sample, shuffle
+from random import sample, shuffle, choice
 
 app = Flask(__name__)
 
@@ -27,16 +27,20 @@ def integrals():
 def series():
 
     tests = {}
-    questions = sample(range(1, 6), 4)
+    questions = sample(range(1, 6), 3)
     for i in questions:
         variants = [1, 2, 3, 4, 5]
         variants.pop(i - 1)
         variants = sample(variants, 3)
         variants.append(i)
         shuffle(variants)
-
         tests[i] = variants
 
+    taylor_v = [1, 2, 3, 4]
+    shuffle(taylor_v)
+    taylor_q = choice([1, 2, 3, 4])
+    tests[10 + taylor_q] = taylor_v
+    print(tests)
     return render_template('series.html', tests = tests, typ = 'series')
 
 if __name__ == '__main__':

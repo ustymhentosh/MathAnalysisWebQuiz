@@ -9,7 +9,7 @@ var question = Object.keys(tests)[0]
 question_counter.innerHTML = 'Question ' + (question_num + 1) + '/' + 4
 
 var right_answ = 0
-
+console.log(tests)
 // set board
 function setBoard(question, variants) {
     q_img_in_html = document.getElementById('ques')
@@ -17,7 +17,12 @@ function setBoard(question, variants) {
         q_img_in_html.src = '/static/images/integrals/start_' + question + '.png'
     } else if (typ == 'series') {
         q_img_in_html.src = '/static/images/series/start_' + question + '.png'
+        if (question_num == 3) {
+            console.log('question', question)
+            q_img_in_html.src = '/static/images/series/taylor/start_' + (question - 10) + '.png'
+        }
     }
+
     count = 1
     for (var variant of variants) {
         v_in_html = document.getElementById('option' + count)
@@ -30,7 +35,10 @@ function setBoard(question, variants) {
         } else if (typ == 'series') {
             v_img_in_html.src = '/static/images/series/end_' + variant + '.png'
         }
-
+        if (question_num == 3 && typ == 'series') {
+            console.log(11)
+            v_img_in_html.src = '/static/images/series/taylor/end_' + variant + '.png'
+        }
 
         if (variant == question) {
             v_in_html.value = 'True'
