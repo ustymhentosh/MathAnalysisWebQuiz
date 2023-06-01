@@ -45,7 +45,7 @@ function setBoard(question, variants) {
             v_img_in_html.src = '/static/images/series/taylor/end_' + variant + '.png'
         }
 
-        if (variant == 'r') {
+        if ((variant == 'r') | (question == variant)) {
             v_in_html.value = 'True'
         } else {
             v_in_html.value = 'False'
