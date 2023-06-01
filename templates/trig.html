@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Quiz</title>
+    <script type="text/javascript">
+        tests = {{ tests | tojson }}
+        typ = {{ typ | tojson }}
+    </script>
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+</head>
+
+<body class='back'>
+    <form class='forma' id="forma">
+        <div class="grid-item heading">
+            <label class='question'>
+                <h2 class="counter-trig" id='question_num'></h2>
+                <img class='ques-img' id='ques' src="">
+
+            </label>
+        </div>
+        </div>
+
+        <div class="grid-item options-trig">
+
+            <label class='option'>
+                <input id='option1' type="radio" name="option" value="option1">
+                <img id='option1img' src="">
+            </label>
+
+            <label class='option'>
+                <input id='option2' type="radio" name="option" value="option2">
+                <img id='option2img' src="">
+            </label>
+
+
+            <label class='option'>
+                <input id='option3' type="radio" name="option" value="option3">
+                <img id='option3img' src="">
+            </label>
+
+            <label class='option'>
+                <input id='option4' type="radio" name="option" value="option4">
+                <img id='option4img' src="">
+            </label>
+
+        </div>
+        <input class="button_submit" type="submit" value="Submit" required>
+    </form>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 class='results' id='results'></h3>
+            <div class="modal-buttons">
+                <button class="button_again" id="reloadBtn">Play Again</button>
+                <button class="button_exit" id="redirectBtn">Exit</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/static/script.js"></script>
+
+</html>

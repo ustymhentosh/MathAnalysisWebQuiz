@@ -21,6 +21,8 @@ function setBoard(question, variants) {
             console.log('question', question)
             q_img_in_html.src = '/static/images/series/taylor/start_' + (question - 10) + '.png'
         }
+    } else if (typ == 'trig') {
+        q_img_in_html.src = '/static/images/trig/q' + question + '/' + 'q.png'
     }
 
     count = 1
@@ -35,12 +37,15 @@ function setBoard(question, variants) {
         } else if (typ == 'series') {
             v_img_in_html.src = '/static/images/series/end_' + variant + '.png'
         }
+        else if (typ == 'trig') {
+            v_img_in_html.src = '/static/images/trig/q' + question + '/' + variant + '.png'
+        }
         if (question_num == 3 && typ == 'series') {
             console.log(11)
             v_img_in_html.src = '/static/images/series/taylor/end_' + variant + '.png'
         }
 
-        if (variant == question) {
+        if (variant == 'r') {
             v_in_html.value = 'True'
         } else {
             v_in_html.value = 'False'
@@ -90,11 +95,6 @@ closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
 });
 
-// window.addEventListener("click", function (event) {
-//     if (event.target === modal) {
-//         modal.style.display = "none";
-//     }
-// });
 
 var reloadBtn = document.getElementById("reloadBtn");
 var redirectBtn = document.getElementById("redirectBtn");

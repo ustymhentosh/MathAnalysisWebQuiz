@@ -43,5 +43,19 @@ def series():
     print(tests)
     return render_template('series.html', tests = tests, typ = 'series')
 
+
+@app.route('/trig')
+def derivative():
+
+    tests = {}
+    questions = sample(range(1, 6), 4)
+    for i in questions:
+        variants = ['r']
+        variants += sample(['w1', 'w2', 'w3', 'w4'], 3)
+        shuffle(variants)
+        tests[i] = variants
+    print(tests)
+    return render_template('trig.html', tests = tests, typ = 'trig')
+
 if __name__ == '__main__':
     app.run(debug=True)
