@@ -9,7 +9,6 @@ var question = Object.keys(tests)[0]
 question_counter.innerHTML = 'Question ' + (question_num + 1) + '/' + 4
 
 var right_answ = 0
-console.log(tests)
 // set board
 function setBoard(question, variants) {
     q_img_in_html = document.getElementById('ques')
@@ -45,7 +44,7 @@ function setBoard(question, variants) {
             v_img_in_html.src = '/static/images/series/taylor/end_' + variant + '.png'
         }
 
-        if ((variant == 'r') | (question == variant)) {
+        if ((variant == 'r') | (question == variant) | ((question - 10) == variant)) {
             v_in_html.value = 'True'
         } else {
             v_in_html.value = 'False'
@@ -65,24 +64,20 @@ forma.addEventListener("submit", (event) => {
         var answ = document.querySelector('input[name="option"]:checked').value;
         return answ
     }
+    answ = getAnsw()
+    if (answ == 'True') {
+        right_answ += 1
+    }
     if (question_num < 3) {
-        answ = getAnsw()
-        if (answ == 'True') {
-            right_answ += 1
-        }
         question_num += 1
         question = Object.keys(tests)[question_num]
         question_counter.innerHTML = 'Question ' + (question_num + 1) + '/' + 4
         setBoard(question, tests[question])
         forma.reset()
     } else {
-        if (answ == 'True') {
-            right_answ += 1
-        }
         modal.style.display = "block";
         document.getElementById('results').innerHTML = 'Result  ' + right_answ + '/' + 4
     }
-
 
 });
 
@@ -91,9 +86,9 @@ forma.addEventListener("submit", (event) => {
 var modal = document.getElementById("modal");
 var closeBtn = document.getElementsByClassName("close")[0];
 
-closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-});
+// closeBtn.addEventListener("click", function () {
+//     modal.style.display = "none";
+// });
 
 
 var reloadBtn = document.getElementById("reloadBtn");
